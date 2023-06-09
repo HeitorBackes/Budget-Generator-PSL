@@ -1,0 +1,45 @@
+<head>
+  <title>Gerador de orçamento PSL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="inputs">
+      <div class="input-wrapper">
+        <div class="var-wrapper">
+          <label for="data-1">Data do Check-In</label>
+          <input type="date" id="data-1" />
+        </div>
+        <div class="var-wrapper">
+          <label for="data-2">Data do Check-Out</label>
+          <input type="date" id="data-2" />
+        </div>
+        <div class="var-wrapper">
+          <label for="qntPessoas">Número de pessoas</label>
+          <input type="number" id="qntPessoas" />
+        </div>
+        <div class="var-wrapper">
+          <label for="discount-rate">Desconto (%)</label>
+          <input type="number" id="discount-rate" value="0" />
+        </div>
+      </div>
+      <div class="buttons-grid">
+        <button id="submit">Gerar orçamento</button>
+        <!-- <button onclick="copy('output')">Copiar orçamento</button> -->
+        <button onclick="copy('output')">Copiar orçamento</button>
+      </div>
+    </div>
+
+    <div class="outputs">
+      <div id="div-output">
+        <p id="output">Selecione as datas e o número de pessoas para receber um orçamento</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
