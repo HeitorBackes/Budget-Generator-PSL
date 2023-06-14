@@ -166,7 +166,7 @@ function getPrice(numGuests, numDaily, discountRate) {
     let price = `${calcSgl(numDaily, discountRate)}
 
     ${calcTwn(numGuests, numDaily, discountRate)}
-
+    
     ${calcDbl(numGuests, numDaily, discountRate)}`;
     return price;
   } else if (numGuests === 2) {
@@ -215,13 +215,14 @@ function copy(copyId) {
   inputElement.type = "text";
   let copyText = document.getElementById(copyId).innerHTML;
   copyText = copyText.replaceAll("<br><br>", "");
-  copyText = copyText.replaceAll("<br>", "");
+  copyText = copyText.replaceAll("<br>", ".");
   navigator.clipboard.writeText(copyText);
-  alert("Orçamento copiado");
+  messageOutput.innerHTML = `Orçamento copiado para área de tranferência.`;
 }
 
 let submit = document.getElementById("submit");
 let output = document.getElementById("output");
+let messageOutput = document.getElementById("message-output");
 
 let valSgl = 169;
 let valSglAr = 209;
@@ -255,6 +256,8 @@ submit.addEventListener("click", () => {
   if (data1.getTime() && data2.getTime()) {
     let timeDifference = data2.getTime() - data1.getTime();
     let numDaily = Math.abs(timeDifference / (1000 * 60 * 60 * 24));
+
+    messageOutput.innerHTML = `Seu orçamento foi gerado com sucesso!`;
 
     console.log(numDaily);
     output.innerHTML = `Data do Check-In: ${dataCheckIn}<br>

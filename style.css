@@ -2,41 +2,70 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "lato", Helvetica, sans-serif;
 }
 
 body {
   margin: 0 auto;
   width: 1200px;
-  height: 700px;
-  background: #a7a7a7;
+  /* height: 700px; */
+  background: #282828;
   font-size: 16px;
+  background-image: url("frente-pousada.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
 .container {
-  background-color: #242831;
-  padding: 6rem 3rem;
+  margin: 2rem auto;
+  background-color: #f7f5f0cc;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.4rem;
+  grid-template-columns: 420px 1fr;
+  gap: 0.5rem;
+  border-radius: 16px;
+}
+
+.inputs {
+  box-sizing: border-box;
+  border: 1px solid #b6af9f;
+  border-radius: 16px;
+  background: #eeeae1;
+  padding: 4rem 2rem;
 }
 .input-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
+  gap: 1.25rem;
 }
 
 .var-wrapper {
   width: 100%;
 }
 
+h1 {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height */
+  text-align: center;
+  color: #192023;
+  margin-bottom: 1.5rem;
+}
+
 label {
-  color: #d5d5d5;
+  color: #192023;
   display: block;
   font-weight: 600;
 }
 input {
-  width: 100%;
+  background: #fff;
+  border: 2px solid #b6af9f;
+  border-radius: 6px;
+  width: 160px;
   font-size: 16px;
   padding: 1rem;
   color: #242831;
@@ -47,7 +76,7 @@ input {
 }
 
 ::-webkit-calendar-picker-indicator {
-  background-color: #18f08b;
+  color: #192023;
   padding: 0.2rem;
 }
 
@@ -58,24 +87,51 @@ input {
 }
 
 button {
-  width: 100%;
-
-  background-color: #18f08b;
-  color: #16191e;
-  font-size: 18px;
-  margin: 2rem auto 2rem auto;
+  width: 160px;
+  background-color: #29363b;
+  color: #eeeae1;
+  font-size: 15px;
+  margin: 2rem 0 2rem 0;
   border: none;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.3rem;
   font-weight: 600;
 }
 
+.secondary-button {
+  box-sizing: border-box;
+  background-color: #eeeae1;
+  border: 2px solid #29363b;
+  color: #29363b;
+}
+
+#submit:active {
+  background-color: #2b454f;
+}
+
+.secondary-button:active {
+  border-color: #2b454f;
+  color: #2b454f;
+}
+
+.div-message {
+  background-color: #ffffff;
+  border: 1px solid #b6af9f;
+  min-height: 24px;
+  width: 350px;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
 #output {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #ffffff;
+  border: 1px solid #b6af9f;
+  border-radius: 12px;
   text-align: left;
-  padding: 1rem;
-  color: #fff;
-  font-size: 1rem;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 1.5rem;
+  color: #192023;
+  font-size: 0.875rem;
   letter-spacing: 0.05rem;
 }
 
